@@ -1,6 +1,6 @@
 {
   "name": "@aomi/react-native-components-media-manager",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react native media manager",
   "private": false,
   "main": "lib/commonjs/index",
