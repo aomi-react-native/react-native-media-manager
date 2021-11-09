@@ -20,7 +20,7 @@
 
 @implementation MediaManager
 
-RCT_EXPORT_MODULE(SitbRCTMediaManager)
+RCT_EXPORT_MODULE(AMRCTMediaManager)
 
 /** 常量 */
 - (NSDictionary<NSString *, id> *)constantsToExport {
