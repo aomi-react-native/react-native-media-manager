@@ -2,6 +2,7 @@
   "name": "@aomi/react-native-components-media-manager",
   "version": "0.0.1",
   "description": "react native media manager",
+  "private": false,
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
