@@ -9,8 +9,8 @@ const {
     PhotoAlbumAuthorizationStatus,
     launchImageLibrary,
     launchCamera,
-    getPhotoAlbumAuthorizationStatus
-  }
+    getPhotoAlbumAuthorizationStatus,
+  },
 } = NativeModules;
 
 export interface Options {
@@ -37,13 +37,13 @@ export enum PhotoAlbumAuthorizationStatusType {
   /**
    * 已授权
    */
-  authorized
+  authorized,
 }
 
 const DEFAULT_LIBRARY_OPTIONS = {
   sourceType: SourceType.savedPhotosAlbum,
   mediaType: MediaType.image,
-  allowsEditing: false
+  allowsEditing: false,
 };
 
 const DEFAULT_CAMERA_OPTIONS = {
@@ -51,7 +51,7 @@ const DEFAULT_CAMERA_OPTIONS = {
   mediaType: MediaType.image,
   cameraType: CameraType.back,
   allowsEditing: false,
-  quality: Quality.high
+  quality: Quality.high,
 };
 
 export interface PhotoAlbum {
@@ -76,7 +76,7 @@ class MediaManager {
    * @returns {*}
    */
   static launchImageLibrary(
-    options: Options = DEFAULT_LIBRARY_OPTIONS
+    options: Options = DEFAULT_LIBRARY_OPTIONS,
   ): Promise<PhotoAlbum> {
     const newOptions = Object.assign({}, DEFAULT_LIBRARY_OPTIONS, options);
     return launchImageLibrary(newOptions);
@@ -90,7 +90,7 @@ class MediaManager {
           .then((image: any) => {
             setTimeout(() => {
               NativeModules.SitbRCTMediaManager.launchEditing(
-                image.original.path
+                image.original.path,
               )
                 .then((edited: any) => {
                   resolve(Object.assign({}, image, edited));
@@ -119,5 +119,5 @@ export {
   MediaType,
   CameraType,
   Quality,
-  PhotoAlbumAuthorizationStatus
+  PhotoAlbumAuthorizationStatus,
 };

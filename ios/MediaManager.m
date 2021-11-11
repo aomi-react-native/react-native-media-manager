@@ -93,7 +93,9 @@ RCT_EXPORT_METHOD(
     self.resolve = resolve;
     self.reject = reject;
     self.options = options;
-    [self launchWithOptions:options];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self launchWithOptions:options];
+    });
 }
 
 RCT_EXPORT_METHOD(getPhotoAlbumAuthorizationStatus:
