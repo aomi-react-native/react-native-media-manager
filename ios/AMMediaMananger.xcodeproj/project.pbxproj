@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libAMMediaMananger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAMMediaMananger.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1449454C273A7012004558DD /* NSMutableDictionary+ImageMetadata.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+ImageMetadata.m"; sourceTree = "<group>"; };
-		B3E7B5881CC2AC0600A0062D /* MediaManager.h.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaManager.h.h; sourceTree = "<group>"; };
+		B3E7B5881CC2AC0600A0062D /* MediaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaManager.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* MediaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				1449454C273A7012004558DD /* NSMutableDictionary+ImageMetadata.m */,
-				B3E7B5881CC2AC0600A0062D /* MediaManager.h.h */,
+				B3E7B5881CC2AC0600A0062D /* MediaManager.h */,
 				B3E7B5891CC2AC0600A0062D /* MediaManager.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
