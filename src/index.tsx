@@ -113,7 +113,9 @@ class MediaManager {
    * 启动相机
    * @param options
    */
-  static launchCamera(options = DEFAULT_CAMERA_OPTIONS): Promise<PhotoAlbum> {
+  static launchCamera(
+    options: Options = DEFAULT_CAMERA_OPTIONS
+  ): Promise<PhotoAlbum> {
     const newOptions = Object.assign({}, DEFAULT_CAMERA_OPTIONS, options);
     if (Platform.OS === 'android' && newOptions.allowsEditing) {
       return new Promise((resolve, reject) => {
