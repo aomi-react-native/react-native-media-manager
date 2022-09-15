@@ -1,8 +1,8 @@
 //
 //  MediaManager.m
-//  SitbRCTMediaBrowser
+//  AMRCTMediaManager
 //
-//  Created by 田尘殇 on 16/6/29.
+//  Created by on 16/6/29.
 //  Copyright © 2016年 Sitb. All rights reserved.
 //
 

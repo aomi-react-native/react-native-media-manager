@@ -5,6 +5,7 @@ react native media manager
 ## Installation
 
 ```sh
+yarn add
 npm install react-native-components-media-manager
 ```
 

@@ -14,10 +14,37 @@ const {
 } = NativeModules;
 
 export interface Options {
+  /**
+   * @see SourceType.photoLibrary
+   * @see SourceType.savedPhotosAlbum
+   * @see SourceType.camera
+   */
   sourceType?: string;
+  /**
+   * 媒体类型
+   * @see MediaType.image
+   * @see MediaType.video
+   */
   mediaType?: string;
+  /**
+   * 是否允许编辑
+   */
   allowsEditing?: boolean;
+  /**
+   * 相机类型
+   * @see CameraType.front 前置相机
+   * @see CameraType.back 后置相机
+   */
   cameraType?: string;
+  /**
+   * 质量
+   * @see Quality.high
+   * @see Quality.medium
+   * @see Quality.low
+   * @see Quality.VGA640x480
+   * @see Quality.VGA1280x720
+   * @see Quality.VGA960x540
+   */
   quality?: number;
 }
 
@@ -66,22 +93,26 @@ export interface PhotoAlbum {
 }
 
 /**
- * @author 田尘殇Sean(sean.snow@live.com)
+ * @author Sean(sean.snow@live.com)
  * @date 16/6/29
  */
 class MediaManager {
   /**
-   *
+   * 启动图库
    * @param options
    * @returns {*}
    */
-  static launchImageLibrary(
+  static launchLibrary(
     options: Options = DEFAULT_LIBRARY_OPTIONS,
   ): Promise<PhotoAlbum> {
     const newOptions = Object.assign({}, DEFAULT_LIBRARY_OPTIONS, options);
     return launchImageLibrary(newOptions);
   }
 
+  /**
+   * 启动相机
+   * @param options
+   */
   static launchCamera(options = DEFAULT_CAMERA_OPTIONS): Promise<PhotoAlbum> {
     const newOptions = Object.assign({}, DEFAULT_CAMERA_OPTIONS, options);
     if (Platform.OS === 'android' && newOptions.allowsEditing) {
@@ -89,7 +120,7 @@ class MediaManager {
         launchCamera(newOptions)
           .then((image: any) => {
             setTimeout(() => {
-              NativeModules.SitbRCTMediaManager.launchEditing(
+              NativeModules.AMRCTMediaManager.launchEditing(
                 image.original.path,
               )
                 .then((edited: any) => {
