@@ -5,18 +5,21 @@ react native media manager
 ## Installation
 
 ```sh
-yarn add
-npm install react-native-components-media-manager
+yarn add @aomi/react-native-media-manager
+npm install @aomi/react-native-media-manager
 ```
 
 ## Usage
 
-```js
-import { multiply } from "react-native-components-media-manager";
+```ts
+import MediaManager from "@aomi/react-native-media-manager";
 
-// ...
+// 启动相册
+MediaManager.launchLibrary().then(console.log);
 
-const result = await multiply(3, 7);
+// 启动相机
+MediaManager.launchCamera().then(console.log);
+
 ```
 
 ## Contributing
