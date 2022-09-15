@@ -1,6 +1,6 @@
 # react-native-components-media-manager
 
-react native media manager
+媒体管理器
 
 ## Installation
 
